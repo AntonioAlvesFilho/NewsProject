@@ -90,7 +90,7 @@
 <script>
 import axios from 'axios'
 import { Form as Forms, Field } from 'vee-validate'
-
+import TodoCard from '../components/cards/TodoCard.vue'
 import PostCard from '../components/cards/PostCard.vue'
 
 export default {
