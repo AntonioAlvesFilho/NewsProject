@@ -160,13 +160,8 @@ export default {
 nav {
   padding: 0.5% 7% 0.5% 9%;
 
-  background: rgb(0, 92, 86);
-  background: linear-gradient(
-    90deg,
-    #00847f 0%,
-    #00847f 50%,
-    rgb(0, 102, 92) 100%
-  );
+  background: rgb(17, 17, 17);
+
   width: 100%;
 }
 
@@ -180,7 +175,7 @@ a {
 }
 
 .navOffCanvas {
-  background-color: rgb(0, 105, 97);
+  background-color: rgb(20, 20, 20);
   display: flex;
   align-items: center !important;
   gap: 3vw;
@@ -219,7 +214,7 @@ a {
 }
 
 .navbar-toggler[data-v-4bc99714] {
-  color: #00835c;
+  color: #0c0c0c;
   padding: 1vw 2vw;
 }
 
@@ -269,7 +264,7 @@ img {
     z-index: 1030;
   }
   .navbar-toggler {
-    color: #007268;
+    color: #161616;
   }
   .center {
     justify-content: space-around;
@@ -311,7 +306,7 @@ img {
   }
 
   .navbar-toggler[data-v-4bc99714] {
-    color: #00835c;
+    color: #141414;
     border: 1px solid;
   }
 }
