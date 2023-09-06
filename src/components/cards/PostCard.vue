@@ -1,5 +1,5 @@
 <template>
-  <SplideSlide>
+  <!-- <SplideSlide>
     <img :src="image" alt="" />
     <div>
       <h1>
@@ -7,7 +7,16 @@
       </h1>
       <p>{{ post.description }}</p>
     </div>
-  </SplideSlide>
+  </SplideSlide> -->
+
+  <div class="item">
+    <img :src="image" alt="" />
+    <div class="text-item">
+      <h3>
+        {{ post.title }}
+      </h3>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -34,8 +43,4 @@ export default {
 }
 </script>
 
-<style>
-img {
-  width: 100%;
-}
-</style>
+<style></style>

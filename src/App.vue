@@ -5,7 +5,7 @@ import { RouterView } from 'vue-router'
 <template>
   <div>
     <NavBar />
-    <div class="container">
+    <div>
       <RouterView />
     </div>
   </div>
@@ -16,10 +16,4 @@ export default {
   components: { NavBar }
 }
 </script>
-<style scoped>
-.container {
-  display: flex;
-  justify-content: center;
-  max-width: 1024px;
-}
-</style>
+<style></style>
