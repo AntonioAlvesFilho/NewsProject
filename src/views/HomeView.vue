@@ -12,7 +12,11 @@
       <PostCard v-for="post in this.posts" :key="post.id" :post="post" />
     </Splide>-->
   <section class="posts">
-    <PostCard v-for="post in this.posts" :key="post.id" :post="post" />
+    <PostCard
+      v-for="(post, index) in this.posts"
+      :key="post.id"
+      :post="post"
+      :class="'post' + index" />
   </section>
 </template>
 <script>
@@ -53,53 +57,49 @@ export default {
 }
 </script>
 <style>
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
 .posts {
-  display: flex;
+  display: grid;
   width: 100%;
-}
-
-.item:nth-child(1) {
-  flex: 2 1 0;
-  color: red;
-}
-
-.item:nth-child(2) {
-  color: blue;
-  flex: 1 1 0;
-}
-.item:nth-child(2) img {
-  transform: scale(5);
-}
-
-.item:nth-child(3) {
-  color: green;
-  flex: 0.8 1 0;
-}
-
-.posts img {
-  width: 100%;
-}
-
-.item {
-  position: relative;
-  overflow: hidden;
-
-  border-radius: 1vw;
-}
-.item .text-item {
-  position: absolute;
-  bottom: 0%;
-  left: 0%;
-  text-align: center;
-  color: #ffffff;
-}
-
-.grid {
+  height: 60vh;
   grid-template-columns: 50% 1fr 20%;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto auto;
   grid-template-areas:
-    'feat0 feat1 feat2'
-    'feat0 feat1 feat3';
-  gap: 8px;
+    'post0 post1 post2'
+    'post0 post1 post3';
+  gap: 0.4%;
+  padding: 0.4%;
+  display: grid;
+  transition: left ease 400ms;
+}
+
+.post0 {
+  grid-area: post0;
+}
+
+.post1 {
+  grid-area: post1;
+}
+
+.post2 {
+  grid-area: post2;
+}
+
+.post3 {
+  grid-area: post3;
+}
+
+@media (max-width: 992px) {
+  .posts {
+    margin-top: 7%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      'post0 post1 post2 post3'
+      'post0 post1 post2 post3';
+  }
 }
 </style>

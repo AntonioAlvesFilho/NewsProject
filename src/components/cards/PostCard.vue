@@ -9,13 +9,8 @@
     </div>
   </SplideSlide> -->
 
-  <div class="item">
-    <img :src="image" alt="" />
-    <div class="text-item">
-      <h3>
-        {{ post.title }}
-      </h3>
-    </div>
+  <div :style="{ backgroundImage: 'url(' + image + ')' }" class="itens">
+    <h3>{{ title }}</h3>
   </div>
 </template>
 
@@ -43,4 +38,23 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.itens {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  justify-content: flex-start;
+  align-items: end;
+  color: white;
+  border-radius: 0.8vw;
+}
+
+.itens h3 {
+  font-size: 26px;
+  margin: 2%;
+}
+</style>
