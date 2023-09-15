@@ -8,13 +8,13 @@ import ForgotPasswordView from '../views/ForgotPasswordView.vue'
 import ResetPasswordView from '../views/ResetPasswordView.vue'
 import Guard from '../middlewares/middleware'
 import ContactView from '../views/ContactView.vue'
+import PostView from '../views/PostView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-
       children: [{ path: '', name: 'home', component: HomeView }]
     },
     {
@@ -47,6 +47,10 @@ const router = createRouter({
       path: '/contact', //colocar Authcomponent aqui
       beforeEnter: Guard.redirectIfNotAuthenticated,
       children: [{ path: '', name: 'contact', component: ContactView }]
+    },
+    {
+      path: '/posts/:url',
+      children: [{ path: '', name: 'post-view', component: PostView }]
     }
   ]
 })
