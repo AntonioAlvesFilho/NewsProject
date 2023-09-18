@@ -1,38 +1,43 @@
 <template>
-  <h1>teste</h1>
+  <div class="d-flex justify-content-center">
+    <div class="postRead">
+      <h1>{{ title }}</h1>
+      <img :src="image" />
+      <p>{{ description }}</p>
+    </div>
+  </div>
 </template>
 <script>
 import axios from 'axios'
 export default {
   data() {
     return {
-      url: '40-india-pousa-na-lua'
+      title: '',
+      description: '',
+      image: ''
     }
   },
-  created() {
-    this.getpost()
-    console.log()
-  },
-
   mounted() {
     // Obtém a URL atual
     const currentURL = window.location.href
 
-    // Procura a parte da URL a partir de "posts/"
-
+    // Procura a parte da URL a partir de "posts/" e que seja o id, função bem útil
     const match = currentURL.match(/\/posts\/(\d+)/)
 
+    //Aqui eu pego apenas o id, que é a primeira coisa que aparece na url
     const postId = match[1]
 
-    console.log(postId, ' passou por aqui')
+    this.getpost(postId)
   },
   methods: {
-    getpost() {
-      const url = this.url
+    getpost(id) {
       axios
-        .get('/api/auth/posts/' + url)
+        .get('/api/auth/posts/' + id)
         .then((response) => {
           console.log(response.data)
+          this.title = response.data.title
+          this.description = response.data.description
+          this.image = response.data.image
         })
         .catch((error) => {
           console.log(error)
@@ -41,4 +46,14 @@ export default {
   }
 }
 </script>
-<style></style>
+<style>
+.postRead {
+  display: flex;
+  flex-direction: column;
+  max-width: 1024px;
+}
+
+.postRead img {
+  max-width: 100%;
+}
+</style>
