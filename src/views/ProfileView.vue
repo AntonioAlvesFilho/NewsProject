@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="d-flex flex-column align-items-center">
     <div>
       <ul>
         <h2 class="text-center">Seja bem vindo(a)</h2>
@@ -7,20 +7,11 @@
       </ul>
     </div>
 
-    <Splide
-      class="width"
-      :options="{
-        rewind: true,
-        autoplay: true,
-        pagination: false,
-        type: 'fade',
-        interval: 4000
-      }"
-      aria-label="My Favorite Images">
+    <div class="d-flex flex-row">
       <PostCard v-for="post in this.posts" :key="post.id" :post="post" />
-    </Splide>
+    </div>
 
-    <div>
+    <div class="w-50">
       <Forms class="text-center" ref="postValidate" v-on:submit="addPost()">
         <h3>Adicionar Novo Post</h3>
 
@@ -76,6 +67,8 @@
           placeholder="detalhe a tarefa" />
         <button class="btn btn-primary" type="submit">Adicionar Tarefa</button>
       </Forms>
+    </div>
+    <div>
       <ul class="list-group">
         <h2 class="text-center">Lista</h2>
         <TodoCard v-for="todo in this.todos" :key="todo.id" :todo="todo" />

@@ -1,9 +1,9 @@
 <template>
-  <main class="form-signin w-100 m-auto">
+  <main class="form-signin login-register-form m-auto">
     <Forms ref="registerForm" v-on:submit="register()">
       <h1 class="h3 mb-4 fw-normal text-center">Sign Up!</h1>
 
-      <div class="form-floating mb-3 align-center">
+      <div class="mb-3 align-center">
         <label for="name">Name</label>
         <Field
           name="name"
@@ -11,12 +11,11 @@
           v-model="name"
           type="text"
           class="form-control"
-          id="floatingName"
-          placeholder="Horacio" />
+          id="floatingName" />
         <ErrorMessage class="errorText" name="name"></ErrorMessage>
       </div>
 
-      <div class="form-floating mb-3 align-center">
+      <div class="mb-3 align-center">
         <label for="floatingEmail">Email address</label>
         <Field
           name="email"
@@ -24,8 +23,7 @@
           v-model="email"
           type="email"
           class="form-control"
-          id="floatingEmail"
-          placeholder="name@example.com" />
+          id="floatingEmail" />
         <ErrorMessage class="errorText" name="email"></ErrorMessage>
       </div>
 
@@ -55,7 +53,8 @@
             class="form-control text-center"
             type="number"
             id="year" />
-
+        </div>
+        <div class="w-100">
           <ErrorMessage class="errorText" name="day"></ErrorMessage>
           <ErrorMessage class="errorText" name="mouth"></ErrorMessage>
           <ErrorMessage class="errorText" name="year"></ErrorMessage>
@@ -89,7 +88,7 @@
         </p>
       </div>
 
-      <div class="form-floating mb-3 align-center">
+      <div class="mb-3 align-center">
         <label for="floatingPassword">Password</label>
         <Field
           name="password"
@@ -97,12 +96,11 @@
           v-model="password"
           type="password"
           class="form-control"
-          id="floatingPassword"
-          placeholder="Password" />
+          id="floatingPassword" />
         <ErrorMessage class="errorText" name="password"></ErrorMessage>
       </div>
 
-      <div class="form-floating mb-5 align-center">
+      <div class="mb-5 align-center">
         <label for="floatingConfirmPassword">Confirm Password</label>
         <Field
           name="confirmation"
@@ -110,8 +108,7 @@
           v-model="passwordConfirmation"
           type="password"
           class="form-control"
-          id="Password"
-          placeholder="Confirm Password" />
+          id="Password" />
         <ErrorMessage class="errorText" name="confirmation"></ErrorMessage>
       </div>
 
@@ -210,6 +207,12 @@ export default {
 <style>
 .errorText {
   color: red;
+  display: block;
+}
+
+.login-register-form {
+  width: 60%;
+  max-width: 1024px;
 }
 
 input::-webkit-outer-spin-button,

@@ -1,11 +1,18 @@
 <template>
   <section>
-    <div class="posts">
-      <PostCard
-        v-for="(post, index) in this.posts"
-        :key="post.id"
-        :post="post"
-        :class="'post' + index" />
+    <div class="d-flex">
+      <div class="posts">
+        <PostCard
+          v-for="(post, index) in this.posts"
+          :key="post.id"
+          :post="post"
+          :class="'post' + index" />
+      </div>
+      <img
+        v-if="loading.ico"
+        src="../../public/circle.gif"
+        alt="loading"
+        class="loading-ico" />
     </div>
   </section>
 </template>
@@ -17,7 +24,10 @@ export default {
   data() {
     return {
       posts: [],
-      mobileWidth: false
+      mobileWidth: false,
+      loading: {
+        ico: true
+      }
     }
   },
   mixins: [windowWidthMixin],
@@ -77,6 +87,11 @@ export default {
 
 .post3 {
   grid-area: post3;
+}
+
+.loading-ico {
+  width: 10%;
+  position: absolute;
 }
 
 @media (max-width: 992px) {

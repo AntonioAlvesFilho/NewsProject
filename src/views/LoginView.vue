@@ -1,8 +1,8 @@
 <template>
-  <main class="Forms -signin w-100 m-auto">
+  <main class="form-signin login-register-form m-auto">
     <h1 class="h3 mb-4 fw-normal text-center">Please sign in</h1>
     <Forms ref="loginValidate" v-on:submit="login()">
-      <div class="Forms -floating mb-3 align-center">
+      <div class="mb-3 align-center">
         <label name="email" for="floatingInput">Email address</label>
 
         <Field
@@ -10,7 +10,7 @@
           v-model="email"
           type="email"
           rules="required|email"
-          class="Forms -control"
+          class="form-control"
           id="floatingInput"
           placeholder="name@example.com" />
         <ErrorMessage
@@ -19,7 +19,7 @@
           name="email"></ErrorMessage>
       </div>
 
-      <div class="Forms -floating mb-3 align-center">
+      <div class="mb-3 align-center">
         <label for="floatingPassword">Password</label>
 
         <Field
@@ -27,7 +27,7 @@
           v-model="password"
           type="password"
           rules="required|min:5"
-          class="Forms -control"
+          class="form-control"
           id="floatingPassword"
           placeholder="Password" />
         <ErrorMessage style="color: darkorange" name="password"></ErrorMessage>
@@ -55,7 +55,6 @@
       <RouterLink to="/forgot-password">Forgot Password?</RouterLink>
       <p class="mt-5 mb-3 text-muted">&copy; 2017–2022</p>
     </Forms>
-    <button class="btn btn-primary"><h1>button</h1></button>
   </main>
 </template>
 
