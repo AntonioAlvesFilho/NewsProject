@@ -48,13 +48,14 @@
           <img
             v-else-if="loading.running"
             style="color: white; width: 50px"
-            src="../assets/802.svg"
+            src="../../public/802.svg"
             alt="" />
         </button>
       </div>
       <RouterLink to="/forgot-password">Forgot Password?</RouterLink>
       <p class="mt-5 mb-3 text-muted">&copy; 2017–2022</p>
     </Forms>
+    <button class="btn btn-primary"><h1>button</h1></button>
   </main>
 </template>
 

@@ -44,7 +44,7 @@ export default {
   background-repeat: no-repeat;
   background-position: center center;
   justify-content: flex-start;
-  align-items: end;
+  align-items: flex-end;
   color: white;
   border-radius: 0.7vw;
 }

@@ -1,18 +1,24 @@
-Meu projeto VueJs
+# newsprojectapp
 
-instalações mais relevantes pro projeto
+## Project setup
+```
+yarn install
+```
 
-    axios
-    bootstrap-vue
-    js-cookie
-    vee-validate
-		eslint + Prettier
-    vite
+### Compiles and hot-reloads for development
+```
+yarn serve
+```
 
-1 Configurar o ESlint com Prettier
+### Compiles and minifies for production
+```
+yarn build
+```
 
-2 Instalar o Bootstrap para o vue 3
+### Lints and fixes files
+```
+yarn lint
+```
 
-3 criar uma tela de login guardando os dados do login com Vuex onde eu possa fazer a validação usando Axios para a api(laravel) usando um formulário da biblioteca Vee-Validate, que informa os campos requeridos e permite diminuir as requisições preenchidas incorretamente para poupar processamento da api.
-
-
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).

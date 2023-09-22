@@ -11,7 +11,7 @@ import ContactView from '../views/ContactView.vue'
 import PostView from '../views/PostView.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   routes: [
     {
       path: '/',
