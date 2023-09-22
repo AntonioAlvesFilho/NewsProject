@@ -184,7 +184,7 @@ export default {
       }
 
       axios
-        .post('http://127.0.0.1:8000/api/register', payload)
+        .post('api/register', payload)
         .then((response) => {
           $toast.success('Registered Successfully', {
             position: 'top-right'

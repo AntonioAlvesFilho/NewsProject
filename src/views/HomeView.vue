@@ -29,12 +29,11 @@ export default {
   methods: {
     getPosts() {
       axios
-        .get('/api/auth/posts/public')
+        .get('api/auth/posts/public')
         .then((response) => {
           this.posts = response.data.data.map((o) => ({
             ...o
           }))
-          console.log(response)
           this.loading.ico = false
         })
         .catch((response) => {

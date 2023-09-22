@@ -94,10 +94,10 @@ export default {
           return
         }
       } catch (error) {
-        return console.log(error)
+        return error
       }
 
-      //then
+      //thens
 
       //payload = input.characters
       const payload = {
@@ -108,7 +108,7 @@ export default {
       //reset error message to see clearly if it refresh on login click
       axios
         //posting payload to api and waiting for response
-        .post('http://127.0.0.1:8000/api/login', payload)
+        .post('api/login', payload)
 
         .then((response) => {
           //getting JWT Token from api

@@ -64,14 +64,13 @@ export default {
       const payload = { email: this.email }
 
       axios
-        .post('http://127.0.0.1:8000/api/forgot-password', payload)
+        .post('api/forgot-password', payload)
         .then(
           (this.responseMessage.message =
             'Link para recuperação de Email enviado'),
           (this.responseMessage.color = 'success')
         )
         .catch((error) => {
-          console.log(error)
           this.responseMessage.message = error.response.data.message
           this.responseMessage.color = 'danger'
         })

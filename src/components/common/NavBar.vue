@@ -150,9 +150,6 @@ export default {
     return {
       loading: false
     }
-  },
-  created() {
-    console.log()
   }
 }
 </script>

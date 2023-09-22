@@ -6,7 +6,6 @@ export default {
   },
   created() {
     this.updateWindowWidth()
-    console.log('teste	')
   },
   mounted() {
     window.addEventListener('resize', this.updateWindowWidth)
@@ -23,9 +22,7 @@ export default {
     windowWidth(newWidth) {
       if (newWidth < 992) {
         this.mobileWidth = true
-        console.log('menor')
       } else {
-        console.log('maior')
         this.mobileWidth = false
       }
     }

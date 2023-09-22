@@ -31,17 +31,11 @@ export default {
   },
   methods: {
     getpost(id) {
-      axios
-        .get('/api/auth/posts/' + id)
-        .then((response) => {
-          console.log(response.data)
-          this.title = response.data.title
-          this.description = response.data.description
-          this.image = response.data.image
-        })
-        .catch((error) => {
-          console.log(error)
-        })
+      axios.get('api/auth/posts/' + id).then((response) => {
+        this.title = response.data.title
+        this.description = response.data.description
+        this.image = response.data.image
+      })
     }
   }
 }

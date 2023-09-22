@@ -127,7 +127,7 @@ export default {
   methods: {
     getTodos() {
       axios
-        .get('/api/auth/todos')
+        .get('api/auth/todos')
         .then((response) => {
           this.todos = response.data.data.map((o) => ({
             ...o,
@@ -142,7 +142,7 @@ export default {
     },
     getPosts() {
       axios
-        .get('/api/auth/posts')
+        .get('api/auth/posts')
         .then((response) => {
           this.posts = response.data.data.map((o) => ({
             ...o

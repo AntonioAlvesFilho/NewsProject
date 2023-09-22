@@ -50,24 +50,19 @@ export default {
       }
       axios
         .put(`api/auth/todos/${todo.id}`, payLoad)
-        .then((response) => {
-          console.log(response)
+        .then(() => {
           this.loading.ico = true
         })
-        .catch((response) => {
-          console.log(response)
-        })
+        .catch(() => {})
       this.changeStateToShow()
     },
     deleteTodo(todo) {
       axios
         .delete(`api/auth/todos/${todo.id}`)
-        .then((response) => {
+        .then(() => {
           this.loading.ico = true
         })
-        .catch((response) => {
-          console.log(response)
-        })
+        .catch(() => {})
     },
     changeStateToShow() {
       this.todo.state = 'show'
@@ -81,14 +76,11 @@ export default {
     getTasks(todo) {
       setTimeout(() => {
         axios
-          .get(`/api/auth/todo-tasks?id=${todo.id}`)
+          .get(`api/auth/todo-tasks?id=${todo.id}`)
           .then((response) => {
             this.tasks = response.data.data
-            console.log(response)
           })
-          .catch((response) => {
-            console.log(response)
-          })
+          .catch(() => {})
       }, 2000)
     }
   },

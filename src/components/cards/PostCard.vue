@@ -1,6 +1,6 @@
 <template>
   <div :style="{ backgroundImage: 'url(' + image + ')' }" class="itens">
-    <a :href="'http://localhost:5173/posts/' + url">
+    <a :href="'posts/' + url">
       <h3>{{ title }}</h3>
     </a>
   </div>

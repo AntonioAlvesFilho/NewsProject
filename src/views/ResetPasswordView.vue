@@ -110,10 +110,9 @@ export default {
 
       axios
         //posting payload to api and waiting for response
-        .post('http://127.0.0.1:8000/api/reset-password', payload)
-        .then((response) => {
+        .post('api/reset-password', payload)
+        .then(() => {
           this.loading.running = false
-          console.log(response.statusText)
         })
         .catch((error) => {
           // A login authentication error is expected here, but if is not what is returned for some reason, like an axios url error, it returns a generic error (unexpected error) instead of crashing the aplication.
@@ -122,8 +121,6 @@ export default {
           this.resetResponse.color = 'danger'
           this.resetResponse.message = errorMessage
           this.loading.running = false
-          console.log(errorMessage)
-          console.log(error.statusText)
         })
     },
 
