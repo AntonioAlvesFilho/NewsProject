@@ -42,6 +42,19 @@
         </div>
 
         <div class="d-flex">
+          <span class="input-group-text" id="describeDesc">Categoria</span>
+          <Field
+            aria-describedby="describeCat"
+            name="category"
+            v-model="category"
+            type="string"
+            rules="required"
+            class="form-control"
+            id="category"
+            placeholder="category" />
+        </div>
+
+        <div class="d-flex">
           <Field
             aria-describedby="describeImage"
             name="image"
@@ -99,6 +112,7 @@ export default {
       image: '',
       title: '',
       description: '',
+      category: '',
       loading: {
         ico: true
       },
@@ -166,7 +180,8 @@ export default {
       const payload = {
         title: this.title,
         description: this.description,
-        image: this.image
+        image: this.image,
+        category: this.category
       }
       axios
         .post('api/auth/posts', payload, {

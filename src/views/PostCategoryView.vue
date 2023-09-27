@@ -17,19 +17,24 @@ export default {
   },
   components: { PostCard },
   mounted() {
-    // Obtém a URL atual
+    //Faz a primeira requisição para o banco, as demais serão feitas pela função watch
     const currentURL = window.location.href
-
-    // Procura a parte da URL a partir de "categories/" e que seja o nome da categoria, função bem útil.
     const match = currentURL.match(/\/categories\/([^/]+)/)
-
     const categoryName = match[1]
-
-    //Aqui eu pego apenas o id, que é a primeira coisa que aparece na url
-    console.log(categoryName)
-
     this.getPostByCategory(categoryName)
   },
+
+  watch: {
+    $route(to, from) {
+      // Verifica se o parâmetro 'name' mudou na rota
+      if (to.params.name !== from.params.name) {
+        const categoryName = this.$route.params.name
+        console.log(categoryName)
+        this.getPostByCategory(categoryName)
+      }
+    }
+  },
+
   methods: {
     getPostByCategory(categoryName) {
       axios

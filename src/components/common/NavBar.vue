@@ -100,8 +100,13 @@
           >
         </li>
         <li class="nav-item mx-1">
-          <router-link to="/categories/RedesSociais" class="nav-link"
+          <router-link to="/categories/social" class="nav-link"
             >Redes Sociais</router-link
+          >
+        </li>
+        <li class="nav-item mx-1">
+          <router-link to="/categories/computador" class="nav-link"
+            >Computador</router-link
           >
         </li>
 
