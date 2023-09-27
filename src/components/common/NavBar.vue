@@ -82,6 +82,38 @@
         </ul>
       </div>
     </nav>
+    <div class="categories">
+      <ul class="navbar-nav flex-row">
+        <li class="nav-item mx-1">
+          <router-link to="/categories/tecnologia" class="nav-link"
+            >Tecnologia</router-link
+          >
+        </li>
+        <li class="nav-item mx-1">
+          <router-link to="/categories/ciencia" class="nav-link"
+            >Ciência</router-link
+          >
+        </li>
+        <li class="nav-item mx-1">
+          <router-link to="/categories/jogos" class="nav-link"
+            >Jogos</router-link
+          >
+        </li>
+        <li class="nav-item mx-1">
+          <router-link to="/categories/RedesSociais" class="nav-link"
+            >Redes Sociais</router-link
+          >
+        </li>
+
+        <li>
+          <button class="btn-lg mx-3">
+            <router-link to="/contact" class="nav-link" style="color: #d9ef3d"
+              >Contato</router-link
+            >
+          </button>
+        </li>
+      </ul>
+    </div>
     <div
       class="offcanvas offcanvas-end navOffCanvas"
       tabindex="-1"
@@ -154,12 +186,26 @@ export default {
 }
 </script>
 <style scoped>
-nav {
+nav,
+.categories {
   padding: 0.5% 7% 0.5% 9%;
-
   background: rgb(17, 17, 17);
-
   width: 100%;
+  color: white;
+}
+
+.categories {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.categories ul {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 15%;
+  max-width: 1024px;
 }
 
 a {

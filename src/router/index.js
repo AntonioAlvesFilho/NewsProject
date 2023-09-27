@@ -9,6 +9,7 @@ import ResetPasswordView from '../views/ResetPasswordView.vue'
 import Guard from '../middlewares/middleware'
 import ContactView from '../views/ContactView.vue'
 import PostView from '../views/PostView.vue'
+import PostCategoryView from '../views/PostCategoryView.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -51,6 +52,12 @@ const router = createRouter({
     {
       path: '/posts/:url',
       children: [{ path: '', name: 'post-view', component: PostView }]
+    },
+    {
+      path: '/categories/:name',
+      children: [
+        { path: '', name: 'post-category-view', component: PostCategoryView }
+      ]
     }
   ]
 })

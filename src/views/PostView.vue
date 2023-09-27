@@ -1,7 +1,11 @@
 <template>
   <div class="d-flex justify-content-center">
     <div class="postRead">
+      <p>Tudo Eletronico > {{ category }}</p>
+
+      <h3>categoria</h3>
       <h1>{{ title }}</h1>
+      <p>subtitulo</p>
       <img :src="image" />
       <p>{{ description }}</p>
     </div>
