@@ -63,5 +63,8 @@ export default {
 }
 
 @media (max-width: 992px) {
+  .itens h3 {
+    font-size: 20px;
+  }
 }
 </style>
