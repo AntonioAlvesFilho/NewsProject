@@ -53,6 +53,8 @@ export default {
 .itens h3 {
   font-size: 26px;
   margin: 2%;
+  text-shadow: -1px -1px 0 #333, 1px -1px 0 #333, -1px 1px 0 #333,
+    1px 1px 0 #333;
 }
 
 .itens a {

@@ -3,7 +3,6 @@
     <div class="postRead">
       <p>Tudo Eletronico > {{ category }}</p>
 
-      <h3>categoria</h3>
       <h1>{{ title }}</h1>
       <p>subtitulo</p>
       <img :src="image" />
@@ -18,7 +17,8 @@ export default {
     return {
       title: '',
       description: '',
-      image: ''
+      image: '',
+      category: ''
     }
   },
   mounted() {
@@ -39,15 +39,17 @@ export default {
         this.title = response.data.title
         this.description = response.data.description
         this.image = response.data.image
+        this.category = response.data.categories[0].name
       })
     }
   }
 }
 </script>
-<style>
+<style scoped>
 .postRead {
   display: flex;
   flex-direction: column;
+  width: 90%;
   max-width: 1024px;
 }
 

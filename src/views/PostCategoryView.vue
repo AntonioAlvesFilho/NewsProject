@@ -1,10 +1,12 @@
 <template>
-  <h3>Ultimas noticias em {{ categoryName }}</h3>
-  <PostCard
-    v-for="(post, index) in this.posts"
-    :key="post.id"
-    :post="post"
-    :class="'post' + index" />
+  <div>
+    <h3>Ultimas noticias em {{ categoryName }}</h3>
+    <PostCard
+      v-for="(post, index) in this.posts"
+      :key="post.id"
+      :post="post"
+      :class="'post' + index" />
+  </div>
 </template>
 <script>
 import axios from 'axios'
@@ -54,11 +56,12 @@ export default {
   }
 }
 </script>
-<style>
+<style scoped>
 .postRead {
   display: flex;
   flex-direction: column;
   max-width: 1024px;
+  width: 90%;
 }
 
 .postRead img {
