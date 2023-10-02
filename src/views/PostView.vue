@@ -56,4 +56,12 @@ export default {
 .postRead img {
   max-width: 100%;
 }
+
+@media (max-width: 768px) {
+  .postRead p {
+    padding-top: 10vw;
+    font-size: 18px;
+    text-align: justify;
+  }
+}
 </style>

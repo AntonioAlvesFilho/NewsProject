@@ -168,7 +168,7 @@ export default {
   }
   .posts {
     grid-template-columns: repeat(2);
-    height: 25vh;
+    height: 30vh;
   }
 }
 </style>
