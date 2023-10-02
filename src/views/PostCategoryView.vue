@@ -1,5 +1,5 @@
 <template>
-  <h1>teste</h1>
+  <h3>Ultimas noticias em {{ categoryName }}</h3>
   <PostCard
     v-for="(post, index) in this.posts"
     :key="post.id"
@@ -12,7 +12,8 @@ import PostCard from '@/components/cards/PostCard.vue'
 export default {
   data() {
     return {
-      posts: []
+      posts: [],
+      categoryName: ''
     }
   },
   components: { PostCard },
@@ -21,6 +22,7 @@ export default {
     const currentURL = window.location.href
     const match = currentURL.match(/\/categories\/([^/]+)/)
     const categoryName = match[1]
+    this.categoryName = categoryName
     this.getPostByCategory(categoryName)
   },
 
@@ -30,6 +32,7 @@ export default {
       if (to.params.name !== from.params.name) {
         const categoryName = this.$route.params.name
         console.log(categoryName)
+        this.categoryName = categoryName
         this.getPostByCategory(categoryName)
       }
     }

@@ -149,7 +149,7 @@ export default {
     },
     getPosts() {
       axios
-        .get('api/auth/posts')
+        .get('api/auth/posts/my-posts')
         .then((response) => {
           this.posts = response.data.data.map((o) => ({
             ...o

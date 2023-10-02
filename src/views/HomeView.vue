@@ -14,16 +14,35 @@
         alt="loading"
         class="loading-ico" />
     </div>
+    <div class="lastest">
+      <div>
+        <h3>Sobre Tecnologia</h3>
+        <PostCardSide
+          v-for="tecPost in this.tecPosts"
+          :key="tecPost.id"
+          :post="tecPost" />
+      </div>
+      <div>
+        <h3>Sobre Ciência</h3>
+        <PostCardSide
+          v-for="ciePost in this.ciePosts"
+          :key="ciePost.id"
+          :post="ciePost" />
+      </div>
+    </div>
   </section>
 </template>
 <script>
 import axios from 'axios'
 import PostCard from '../components/cards/PostCard.vue'
 import windowWidthMixin from '../mixins/windowWidthMixin.js'
+import PostCardSide from '@/components/cards/PostCardSide.vue'
 export default {
   data() {
     return {
       posts: [],
+      tecPosts: [],
+      ciePosts: [],
       mobileWidth: false,
       loading: {
         ico: true
@@ -33,13 +52,13 @@ export default {
   mixins: [windowWidthMixin],
 
   created() {
-    this.getPosts()
+    this.getPosts(), this.getTecPosts(), this.getCiePosts()
   },
-  components: { PostCard },
+  components: { PostCard, PostCardSide },
   methods: {
     getPosts() {
       axios
-        .get('api/auth/posts/public')
+        .get('api/auth/posts/')
         .then((response) => {
           this.posts = response.data.data.map((o) => ({
             ...o
@@ -49,11 +68,35 @@ export default {
         .catch((response) => {
           console.log(response)
         })
+    },
+    getTecPosts() {
+      axios
+        .get('api/auth/categories/' + 'tecnologia')
+        .then((response) => {
+          this.tecPosts = response.data.posts.map((o) => ({
+            ...o
+          }))
+        })
+        .catch((error) => {
+          console.log(error)
+        })
+    },
+    getCiePosts() {
+      axios
+        .get('api/auth/categories/' + 'ciencia')
+        .then((response) => {
+          this.ciePosts = response.data.posts.map((o) => ({
+            ...o
+          }))
+        })
+        .catch((error) => {
+          console.log(error)
+        })
     }
   }
 }
 </script>
-<style>
+<style scoped>
 * {
   font-family: 'Roboto', sans-serif;
 }
@@ -94,6 +137,12 @@ export default {
   position: absolute;
 }
 
+.lastest {
+  padding: 1.5%;
+  display: flex;
+  gap: 5%;
+}
+
 @media (max-width: 992px) {
   .posts {
     margin-top: 7%;
@@ -111,6 +160,16 @@ export default {
   .post3 {
     display: none;
     grid-area: unset;
+  }
+}
+
+@media (max-width: 768px) {
+  .lastest {
+    flex-direction: column;
+  }
+  .posts {
+    grid-template-columns: repeat(2);
+    height: 40vh;
   }
 }
 </style>

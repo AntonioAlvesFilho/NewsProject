@@ -19,106 +19,44 @@
         </div>
       </div>
       <div class="collapse navbar-collapse sidebar" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 flex-row center navul">
+        <ul class="navbar-nav flex-row categories-ul">
           <li class="nav-item mx-1">
-            <router-link
-              to="/"
-              class="nav-link"
-              :class="{
-                active: $route.path == '/'
-              }"
-              @click="$router.push('/')"
-              >Inicio</router-link
+            <router-link to="/" class="nav-link">Início</router-link>
+          </li>
+          <li class="nav-item mx-1">
+            <router-link to="/categories/tecnologia" class="nav-link"
+              >Tecnologia</router-link
             >
           </li>
           <li class="nav-item mx-1">
-            <router-link
-              to="/login"
-              class="nav-link"
-              :class="{
-                active: $route.path == '/login'
-              }"
-              @click="$router.push('/login')"
-              >Login</router-link
+            <router-link to="/categories/ciencia" class="nav-link"
+              >Ciência</router-link
             >
           </li>
           <li class="nav-item mx-1">
-            <router-link
-              to="/register"
-              class="nav-link"
-              :class="{
-                active: $route.path == '/register'
-              }"
-              @click="$router.push('/register')"
-              >Cadastre-se</router-link
+            <router-link to="/categories/jogos" class="nav-link"
+              >Jogos</router-link
             >
           </li>
           <li class="nav-item mx-1">
-            <router-link
-              to="/profile"
-              class="nav-link"
-              :class="{
-                active: $route.path == '/profile'
-              }"
-              @click="$router.push('/profile')"
-              >Perfil</router-link
+            <router-link to="/categories/social" class="nav-link"
+              >Redes Sociais</router-link
+            >
+          </li>
+          <li class="nav-item mx-1">
+            <router-link to="/categories/computador" class="nav-link"
+              >Computador</router-link
             >
           </li>
 
-          <li>
-            <button class="btn-lg mx-3">
-              <router-link
-                to="/contact"
-                class="nav-link"
-                :class="{
-                  active: $route.path == '/contact'
-                }"
-                @click="$router.push('/contact')"
-                style="color: #d9ef3d"
-                >Contato</router-link
-              >
-            </button>
+          <li class="nav-item mx-1">
+            <router-link to="/categories/computador" class="nav-link"
+              >Computador</router-link
+            >
           </li>
         </ul>
       </div>
     </nav>
-    <div class="categories">
-      <ul class="navbar-nav flex-row">
-        <li class="nav-item mx-1">
-          <router-link to="/categories/tecnologia" class="nav-link"
-            >Tecnologia</router-link
-          >
-        </li>
-        <li class="nav-item mx-1">
-          <router-link to="/categories/ciencia" class="nav-link"
-            >Ciência</router-link
-          >
-        </li>
-        <li class="nav-item mx-1">
-          <router-link to="/categories/jogos" class="nav-link"
-            >Jogos</router-link
-          >
-        </li>
-        <li class="nav-item mx-1">
-          <router-link to="/categories/social" class="nav-link"
-            >Redes Sociais</router-link
-          >
-        </li>
-        <li class="nav-item mx-1">
-          <router-link to="/categories/computador" class="nav-link"
-            >Computador</router-link
-          >
-        </li>
-
-        <li>
-          <button class="btn-lg mx-3">
-            <router-link to="/contact" class="nav-link" style="color: #d9ef3d"
-              >Contato</router-link
-            >
-          </button>
-        </li>
-      </ul>
-    </div>
     <div
       class="offcanvas offcanvas-end navOffCanvas"
       tabindex="-1"
@@ -191,35 +129,13 @@ export default {
 }
 </script>
 <style scoped>
-nav,
-.categories {
+nav {
+  display: flex;
+  flex-direction: column;
   padding: 0.5% 7% 0.5% 9%;
   background: rgb(17, 17, 17);
   width: 100%;
   color: white;
-}
-
-.categories {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.categories ul {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  gap: 15%;
-  max-width: 1024px;
-}
-
-a {
-  display: flex;
-  flex-direction: row;
-}
-.navul {
-  align-items: center;
-  width: 620px;
 }
 
 .navOffCanvas {
@@ -276,10 +192,6 @@ img {
 }
 
 @media (min-width: 1440px) {
-  .navul {
-    width: 800px;
-  }
-
   h3 {
     font-size: 54px !important;
   }
@@ -298,14 +210,10 @@ img {
 }
 
 @media (max-width: 1440px) {
-  .navul {
-    width: 650px;
-  }
 }
 
 @media (max-width: 992px) {
   nav {
-    position: fixed;
     top: 0;
     right: 0;
     left: 0;
@@ -313,15 +221,6 @@ img {
   }
   .navbar-toggler {
     color: #161616;
-  }
-  .center {
-    justify-content: space-around;
-    align-items: center;
-    font-size: 1.75vw;
-  }
-
-  .center button {
-    font-size: 2vw;
   }
 
   .navbar-toggler-icon {

@@ -1,10 +1,12 @@
 <template>
-  <div :style="{ backgroundImage: 'url(' + image + ')' }" class="itens">
-    <router-link :to="`/posts/${slug}`">
-      <h3>{{ title }}</h3>
-      {{ baseURL }}
-    </router-link>
-  </div>
+  <router-link :to="`/posts/${slug}`">
+    <div class="itens">
+      <div class="imageWidth">
+        <img :src="image" alt="noticia" />
+      </div>
+      <p>{{ title }}</p>
+    </div>
+  </router-link>
 </template>
 
 <script>
@@ -39,27 +41,24 @@ export default {
 <style scoped>
 .itens {
   display: flex;
-  width: 100%;
-  height: auto;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  justify-content: flex-start;
-  align-items: flex-end;
-  color: white;
-  border-radius: 0.7vw;
+  align-items: center;
+  gap: 2%;
+  padding: 1.2%;
 }
 
-.itens h3 {
-  font-size: 26px;
-  margin: 2%;
+img {
+  max-width: 100%;
+  border-radius: 0.5vw;
 }
 
-.itens a {
-  text-decoration: none;
-  color: inherit;
+p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
 }
 
-@media (max-width: 992px) {
+.imageWidth {
+  max-width: 20%;
 }
 </style>
