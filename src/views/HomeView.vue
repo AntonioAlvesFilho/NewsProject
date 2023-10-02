@@ -145,7 +145,6 @@ export default {
 
 @media (max-width: 992px) {
   .posts {
-    margin-top: 7%;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto auto;
     grid-template-areas:

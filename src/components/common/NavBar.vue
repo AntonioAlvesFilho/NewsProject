@@ -68,41 +68,43 @@
           to="/"
           class="nav-link sideroute"
           data-bs-dismiss="offcanvas"
-          :class="{
-            active: $route.path == '/'
-          }"
           @click="$router.push('/')">
           <li class="nav-item mx-1">Inicio</li></router-link
         >
         <router-link
-          to="/login"
+          to="/categories/tecnologia"
           class="nav-link sideroute"
           data-bs-dismiss="offcanvas"
-          :class="{
-            active: $route.path == '/login'
-          }"
-          @click="$router.push('/login')">
-          <li class="nav-item mx-1">Login</li></router-link
+          @click="$router.push('/categories/tecnologia')">
+          <li class="nav-item mx-1">Tecnologia</li></router-link
         >
         <router-link
-          to="/register"
+          to="/categories/ciencia"
           class="nav-link sideroute"
           data-bs-dismiss="offcanvas"
-          :class="{
-            active: $route.path == '/register'
-          }"
-          @click="$router.push('/register')">
-          <li class="nav-item mx-1">Cadastre-se</li></router-link
+          @click="$router.push('/categories/ciencia')">
+          <li class="nav-item mx-1">Ciência</li></router-link
         >
         <router-link
-          to="/profile"
+          to="/categories/jogos"
           class="nav-link sideroute"
           data-bs-dismiss="offcanvas"
-          :class="{
-            active: $route.path == '/profile'
-          }"
-          @click="$router.push('/profile')">
-          <li class="nav-item mx-1">Perfil</li></router-link
+          @click="$router.push('/categories/jogos')">
+          <li class="nav-item mx-1">Jogos</li></router-link
+        >
+        <router-link
+          to="/categories/social"
+          class="nav-link sideroute"
+          data-bs-dismiss="offcanvas"
+          @click="$router.push('/categories/social')">
+          <li class="nav-item mx-1">Redes Sociais</li></router-link
+        >
+        <router-link
+          to="/categories/computador"
+          class="nav-link sideroute"
+          data-bs-dismiss="offcanvas"
+          @click="$router.push('/categories/computador')">
+          <li class="nav-item mx-1">Computador</li></router-link
         >
       </ul>
       <button class="btn-lg mx-3">
@@ -232,6 +234,9 @@ img {
 }
 
 @media (max-width: 540px) {
+  nav {
+    padding: 1.5% 7% 1.5% 9%;
+  }
   a {
     padding: 0 !important;
     text-align: end;
