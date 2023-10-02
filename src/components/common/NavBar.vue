@@ -2,8 +2,9 @@
   <div>
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
+        <p class="hide"></p>
         <router-link to="/">
-          <img src="" alt="" />
+          <img src="../../../public/Tudo.png" class="logo" alt="" />
         </router-link>
         <div class="menu-meneger">
           <button
@@ -189,8 +190,9 @@ nav {
   flex-direction: row-reverse;
 }
 
-img {
-  max-width: 175px;
+.logo {
+  max-width: 300px;
+  margin: 10px;
 }
 
 @media (min-width: 1440px) {
@@ -220,6 +222,10 @@ img {
     right: 0;
     left: 0;
     z-index: 1030;
+  }
+
+  .hide {
+    display: none;
   }
   .navbar-toggler {
     color: #161616;
