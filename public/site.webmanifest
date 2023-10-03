@@ -1,6 +1,7 @@
 {
   "name": "Tudo Eletrônico",
   "short_name": "TE",
+  "start_url": "https://tudoeletronico.com.br",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",

@@ -29,30 +29,24 @@
 
             <ul class="list-unstyled mb-0">
               <li class="nav-item mx-1">
-                <router-link to="/" class="nav-link">Início</router-link>
+                <router-link to="/">Início</router-link>
               </li>
               <li class="nav-item mx-1">
-                <router-link to="/categories/tecnologia" class="nav-link"
+                <router-link to="/categories/tecnologia"
                   >Tecnologia</router-link
                 >
               </li>
               <li class="nav-item mx-1">
-                <router-link to="/categories/ciencia" class="nav-link"
-                  >Ciência</router-link
-                >
+                <router-link to="/categories/ciencia">Ciência</router-link>
               </li>
               <li class="nav-item mx-1">
-                <router-link to="/categories/jogos" class="nav-link"
-                  >Jogos</router-link
-                >
+                <router-link to="/categories/jogos">Jogos</router-link>
               </li>
               <li class="nav-item mx-1">
-                <router-link to="/categories/social" class="nav-link"
-                  >Redes Sociais</router-link
-                >
+                <router-link to="/categories/social">Redes Sociais</router-link>
               </li>
               <li class="nav-item mx-1">
-                <router-link to="/categories/computador" class="nav-link"
+                <router-link to="/categories/computador"
                   >Computador</router-link
                 >
               </li>
