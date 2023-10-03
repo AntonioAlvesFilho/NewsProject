@@ -19,20 +19,7 @@
           <!--Grid row-->
         </form>
       </section>
-      <!-- Section: Form -->
 
-      <!-- Section: Text -->
-      <section class="mb-4">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-          distinctio earum repellat quaerat voluptatibus placeat nam, commodi
-          optio pariatur est quia magnam eum harum corrupti dicta, aliquam sequi
-          voluptate quas.
-        </p>
-      </section>
-      <!-- Section: Text -->
-
-      <!-- Section: Links -->
       <section class="">
         <!--Grid row-->
         <div class="row">

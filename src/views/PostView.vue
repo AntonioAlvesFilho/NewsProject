@@ -1,10 +1,9 @@
 <template>
   <div class="d-flex justify-content-center">
     <div class="postRead">
-      <p>Tudo Eletronico > {{ category }}</p>
+      <p><router-link to="/">Tudo Eletronico</router-link> > {{ category }}</p>
 
       <h1>{{ title }}</h1>
-      <p>subtitulo</p>
       <img :src="image" />
       <p>{{ description }}</p>
     </div>

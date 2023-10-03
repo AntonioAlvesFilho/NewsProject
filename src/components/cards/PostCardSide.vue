@@ -64,6 +64,6 @@ p {
 }
 
 .imageWidth {
-  max-width: 20%;
+  max-width: 30%;
 }
 </style>

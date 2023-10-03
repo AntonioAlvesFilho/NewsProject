@@ -16,14 +16,14 @@
     </div>
     <div class="lastest">
       <div>
-        <h3>Sobre Tecnologia</h3>
+        <h3>Tecnologia</h3>
         <PostCardSide
           v-for="tecPost in this.tecPosts"
           :key="tecPost.id"
           :post="tecPost" />
       </div>
       <div>
-        <h3>Sobre Ciência</h3>
+        <h3>Ciência</h3>
         <PostCardSide
           v-for="ciePost in this.ciePosts"
           :key="ciePost.id"

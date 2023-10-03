@@ -1,8 +1,9 @@
 <template>
   <div :style="{ backgroundImage: 'url(' + image + ')' }" class="itens">
     <router-link :to="`/posts/${slug}`">
-      <h3>{{ title }}</h3>
-      {{ baseURL }}
+      <div>
+        <h3>{{ title }}</h3>
+      </div>
     </router-link>
   </div>
 </template>
@@ -65,6 +66,10 @@ export default {
 .itens a {
   text-decoration: none;
   color: inherit;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: end;
 }
 
 @media (max-width: 992px) {
