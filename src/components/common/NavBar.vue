@@ -40,11 +40,13 @@
         </ul>
       </div>
       <div class="container-fluid">
-        <img
-          style="width: 40px"
-          v-if="mobileWidth"
-          src="../../../public/TudoIcon.png"
-          alt="" />
+        <router-link to="/">
+          <img
+            style="width: 40px"
+            v-if="mobileWidth"
+            src="../../../public/TudoIcon.png"
+            alt="" />
+        </router-link>
         <div class="menu-meneger navbar">
           <button
             class="navbar-toggler"
@@ -53,7 +55,8 @@
             aria-controls="offcanvasExample"
             aria-expanded="false"
             aria-label="Toggle navigation"
-            data-bs-toggle="offcanvas">
+            data-bs-toggle="offcanvas"
+            data-bs-theme="dark">
             <span class="navbar-toggler-icon"></span>
           </button>
         </div>
@@ -64,7 +67,6 @@
       tabindex="-1"
       id="offcanvasExample"
       aria-labelledby="offcanvasExampleLabel">
-      <img src="" />
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-block w-100">
         <router-link
           to="/"
