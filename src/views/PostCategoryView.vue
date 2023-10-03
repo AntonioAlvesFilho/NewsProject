@@ -1,11 +1,15 @@
 <template>
-  <div>
-    <h3>Ultimas noticias em {{ categoryName }}</h3>
-    <PostCard
-      v-for="(post, index) in this.posts"
-      :key="post.id"
-      :post="post"
-      :class="'post' + index" />
+  <div class="contains">
+    <div class="content">
+      <h3>Ultimas noticias em {{ categoryName }}</h3>
+      <div class="postsItem">
+        <PostCard
+          v-for="(post, index) in this.posts"
+          :key="post.id"
+          :post="post"
+          :class="'post' + index" />
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -57,14 +61,17 @@ export default {
 }
 </script>
 <style scoped>
-.postRead {
+.contains {
+  display: flex;
+  justify-content: space-around;
+}
+.content {
   display: flex;
   flex-direction: column;
-  max-width: 1024px;
-  width: 90%;
 }
 
-.postRead img {
-  max-width: 100%;
+.postsItem {
+  display: flex;
+  gap: 20%;
 }
 </style>

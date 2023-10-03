@@ -31,12 +31,6 @@
               >Computador</router-link
             >
           </li>
-
-          <li class="nav-item mx-1">
-            <router-link to="/categories/computador" class="nav-link"
-              >Computador</router-link
-            >
-          </li>
         </ul>
       </div>
       <div class="container-fluid">

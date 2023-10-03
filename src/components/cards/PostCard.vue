@@ -48,6 +48,11 @@ export default {
   align-items: flex-end;
   color: white;
   border-radius: 1em;
+  transition: transform 0.3s ease;
+}
+
+.itens:hover {
+  transform: scale(1.02);
 }
 
 .itens h3 {

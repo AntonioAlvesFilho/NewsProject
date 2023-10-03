@@ -44,6 +44,11 @@ export default {
   align-items: center;
   gap: 2%;
   padding: 1.2%;
+  transition: transform 0.3s ease;
+}
+
+.itens:hover {
+  transform: scale(1.02);
 }
 
 img {
