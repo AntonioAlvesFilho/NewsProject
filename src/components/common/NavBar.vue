@@ -67,7 +67,8 @@
       tabindex="-1"
       id="offcanvasExample"
       aria-labelledby="offcanvasExampleLabel">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-block w-100">
+      <ul
+        class="navbar-nav ms-auto mb-2 mb-lg-0 d-block w-100 navbar-nav-scroll">
         <router-link
           to="/"
           class="nav-link sideroute"
