@@ -37,41 +37,47 @@
         <!--Grid row-->
         <div class="row">
           <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Links</h5>
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0 m-auto">
+            <h5 class="text-uppercase">Categorias</h5>
 
             <ul class="list-unstyled mb-0">
-              <li>
-                <a href="#!" class="text-white">Link 1</a>
+              <li class="nav-item mx-1">
+                <router-link to="/" class="nav-link">Início</router-link>
               </li>
-              <li>
-                <a href="#!" class="text-white">Link 2</a>
+              <li class="nav-item mx-1">
+                <router-link to="/categories/tecnologia" class="nav-link"
+                  >Tecnologia</router-link
+                >
               </li>
-              <li>
-                <a href="#!" class="text-white">Link 3</a>
+              <li class="nav-item mx-1">
+                <router-link to="/categories/ciencia" class="nav-link"
+                  >Ciência</router-link
+                >
               </li>
-              <li>
-                <a href="#!" class="text-white">Link 4</a>
+              <li class="nav-item mx-1">
+                <router-link to="/categories/jogos" class="nav-link"
+                  >Jogos</router-link
+                >
+              </li>
+              <li class="nav-item mx-1">
+                <router-link to="/categories/social" class="nav-link"
+                  >Redes Sociais</router-link
+                >
+              </li>
+              <li class="nav-item mx-1">
+                <router-link to="/categories/computador" class="nav-link"
+                  >Computador</router-link
+                >
               </li>
             </ul>
           </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
         </div>
-        <!--Grid row-->
       </section>
-      <!-- Section: Links -->
     </div>
-    <!-- Grid container -->
-
-    <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgb(12, 12, 12)">
-      <p>© 2020 Copyright</p>
+      <p>© 2023 Copyright</p>
     </div>
-    <!-- Copyright -->
   </footer>
-  <!-- Footer -->
 </template>
 <script>
 export default {}
