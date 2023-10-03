@@ -6,7 +6,7 @@ import { RouterView } from 'vue-router'
   <div class="d-flex flex-column">
     <div v-if="!mobileWidth" class="d-flex justify-content-center bg-preto">
       <router-link to="/">
-        <img src="../public/Tudo.png" class="logo" alt="" />
+        <img src="../public/Tudo.png" class="logo" alt="logo" />
       </router-link>
     </div>
     <NavBar class="navbar sticky-top" style="background-color: #111111" />

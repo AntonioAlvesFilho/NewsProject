@@ -39,7 +39,7 @@
             v-else-if="loading.running"
             style="color: white"
             src="loading.png"
-            alt="" />
+            alt="loading" />
         </button>
       </div>
 
@@ -48,7 +48,7 @@
         :class="`text-${resetResponse.color} rounded d-flex`">
         <h5>{{ resetResponse.message }}</h5>
       </div>
-      <p class="mt-5 mb-3 text-muted">&copy; 2017–2022</p>
+      <p class="mt-5 mb-3 text-muted">&copy; 2023</p>
     </Forms>
   </main>
 </template>

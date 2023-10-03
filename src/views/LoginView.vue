@@ -49,7 +49,7 @@
             v-else-if="loading.running"
             style="color: white; width: 50px"
             src="../../public/802.svg"
-            alt="" />
+            alt="loading" />
         </button>
       </div>
       <RouterLink to="/forgot-password">Forgot Password?</RouterLink>

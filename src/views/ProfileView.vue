@@ -87,7 +87,7 @@
         <TodoCard v-for="todo in this.todos" :key="todo.id" :todo="todo" />
       </ul>
       <div class="text-center" v-if="loading.ico">
-        <img src="/circle.gif" style="width: 50px" alt="" />
+        <img src="/circle.gif" style="width: 50px" alt="loading" />
       </div>
     </div>
   </div>

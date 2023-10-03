@@ -39,7 +39,7 @@
             style="width: 40px"
             v-if="mobileWidth"
             src="../../../public/TudoIcon.png"
-            alt="" />
+            alt="logo" />
         </router-link>
         <div class="menu-meneger navbar">
           <button
