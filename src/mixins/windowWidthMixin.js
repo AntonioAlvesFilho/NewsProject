@@ -25,6 +25,7 @@ export default {
       } else {
         this.mobileWidth = false
       }
+      console.log(newWidth)
     }
   }
 }

@@ -1,24 +1,6 @@
 <template>
   <div>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <div class="container-fluid">
-        <p class="hide"></p>
-        <router-link to="/">
-          <img src="../../../public/Tudo.png" class="logo" alt="" />
-        </router-link>
-        <div class="menu-meneger">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-target="#offcanvasExample"
-            aria-controls="offcanvasExample"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            data-bs-toggle="offcanvas">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </div>
+    <nav class="navbar navbar-expand-lg navbar-dark p-0">
       <div class="collapse navbar-collapse sidebar" id="navbarSupportedContent">
         <ul class="navbar-nav flex-row categories-ul">
           <li class="nav-item mx-1">
@@ -56,6 +38,25 @@
             >
           </li>
         </ul>
+      </div>
+      <div class="container-fluid">
+        <img
+          style="width: 40px"
+          v-if="mobileWidth"
+          src="../../../public/TudoIcon.png"
+          alt="" />
+        <div class="menu-meneger navbar">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-target="#offcanvasExample"
+            aria-controls="offcanvasExample"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            data-bs-toggle="offcanvas">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
       </div>
     </nav>
     <div
@@ -122,23 +123,23 @@
 </template>
 
 <script>
+import windowWidthMixin from '@/mixins/windowWidthMixin'
 export default {
   name: 'NavBar',
   data() {
     return {
-      loading: false
+      loading: false,
+      mobileWidth: false
     }
-  }
+  },
+  mixins: [windowWidthMixin]
 }
 </script>
 <style scoped>
 nav {
   display: flex;
   flex-direction: column;
-  padding: 0.5% 7% 0.5% 9%;
-  background: rgb(17, 17, 17);
   width: 100%;
-  color: white;
 }
 
 .navOffCanvas {
@@ -188,11 +189,6 @@ nav {
 .menu-meneger {
   display: flex;
   flex-direction: row-reverse;
-}
-
-.logo {
-  max-width: 300px;
-  margin: 10px;
 }
 
 @media (min-width: 1440px) {
