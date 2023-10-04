@@ -42,7 +42,7 @@ a {
 
 .logo {
   max-width: 300px;
-  margin: 10px;
+  padding: 10px;
 }
 
 .bg-preto {
