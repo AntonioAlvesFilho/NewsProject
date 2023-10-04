@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import HomeView from '../views/HomeView.vue'
+const HomeView = () => import('../views/HomeView.vue')
 import ProfileView from '../views/ProfileView.vue'
 import LoginView from '../views/LoginView.vue'
 import RegisterView from '../views/RegisterView.vue'
@@ -8,8 +8,8 @@ import ForgotPasswordView from '../views/ForgotPasswordView.vue'
 import ResetPasswordView from '../views/ResetPasswordView.vue'
 import Guard from '../middlewares/middleware'
 import ContactView from '../views/ContactView.vue'
-import PostView from '../views/PostView.vue'
-import PostCategoryView from '../views/PostCategoryView.vue'
+const PostView = () => import('../views/PostView.vue')
+const PostCategoryView = () => import('../views/PostCategoryView.vue')
 
 const router = createRouter({
   history: createWebHistory(),
