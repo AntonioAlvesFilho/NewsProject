@@ -195,5 +195,9 @@ export default {
     grid-template-columns: repeat(2);
     height: 25vh;
   }
+
+  .lastest h3 {
+    width: 40%;
+  }
 }
 </style>

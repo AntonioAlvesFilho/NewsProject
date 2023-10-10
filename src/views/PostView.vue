@@ -5,9 +5,7 @@
 
       <h1>{{ title }}</h1>
       <img :src="image" />
-      <p style="text-align: center; margin-bottom: 4%">
-        image caption for understanding
-      </p>
+      <p style="text-align: center">image caption for understanding</p>
       <p>{{ description }}</p>
     </div>
   </div>
