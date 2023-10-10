@@ -8,6 +8,7 @@ import ForgotPasswordView from '../views/ForgotPasswordView.vue'
 import ResetPasswordView from '../views/ResetPasswordView.vue'
 import Guard from '../middlewares/middleware'
 import ContactView from '../views/ContactView.vue'
+import NotFoundView from '../views/NotFoundView.vue'
 const PostView = () => import('../views/PostView.vue')
 const PostCategoryView = () => import('../views/PostCategoryView.vue')
 
@@ -58,6 +59,11 @@ const router = createRouter({
       children: [
         { path: '', name: 'post-category-view', component: PostCategoryView }
       ]
+    },
+    {
+      path: '/:catchAll(.*)',
+      name: 'not-found',
+      component: NotFoundView
     }
   ]
 })

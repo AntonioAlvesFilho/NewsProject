@@ -28,10 +28,7 @@ export default {
     }
   },
   components: { NavBar, FooterView },
-  mixins: [windowWidthMixin],
-  created() {
-    console.log(windowWidthMixin, 'testeeee')
-  }
+  mixins: [windowWidthMixin]
 }
 </script>
 <style>

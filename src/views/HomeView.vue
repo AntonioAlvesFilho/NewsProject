@@ -16,14 +16,22 @@
     </div>
     <div class="lastest">
       <div>
-        <h3>Tecnologia</h3>
+        <h3>
+          <router-link to="/categories/tecnologia" class="categories"
+            >Tecnologia</router-link
+          >
+        </h3>
         <PostCardSide
           v-for="tecPost in this.tecPosts"
           :key="tecPost.id"
           :post="tecPost" />
       </div>
       <div>
-        <h3>Ciência</h3>
+        <h3>
+          <router-link to="/categories/ciencia" class="categories"
+            >Ciência</router-link
+          >
+        </h3>
         <PostCardSide
           v-for="ciePost in this.ciePosts"
           :key="ciePost.id"
@@ -57,8 +65,9 @@ export default {
   components: { PostCard, PostCardSide },
   methods: {
     getPosts() {
+      const qty = 4
       axios
-        .get('api/auth/posts/')
+        .get('api/auth/posts/quantity/' + qty)
         .then((response) => {
           this.posts = response.data.data.map((o) => ({
             ...o
@@ -141,6 +150,22 @@ export default {
   padding: 1.5%;
   display: flex;
   gap: 5%;
+}
+
+.lastest h3 {
+  text-align: center;
+  color: #ffffff;
+  width: 30%;
+  padding: 1%;
+  border-radius: 1vw;
+  background-color: #000000;
+}
+
+.categories {
+  transition: 0.2s ease-in;
+}
+.categories:hover {
+  color: #004aad;
 }
 
 @media (max-width: 992px) {

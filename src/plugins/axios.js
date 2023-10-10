@@ -2,7 +2,8 @@ import axios from 'axios'
 import Cookie from '../middlewares/token'
 
 axios.defaults.baseURL = process.env.VUE_APP_BASE_URL
-axios.defaults.headers.common['Content-Type'] = 'applicatio/json'
+axios.defaults.headers.common['Content-Type'] = 'application/json'
+
 axios.defaults.headers.common.Accept = 'application/json'
 axios.interceptors.request.use(
   function (config) {
@@ -19,11 +20,9 @@ axios.interceptors.request.use(
 
 axios.interceptors.response.use(
   function (response) {
-    console.log('sucesso')
     return response
   },
   function (error) {
-    console.log('error')
     return Promise.reject(error)
   }
 )

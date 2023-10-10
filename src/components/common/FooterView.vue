@@ -25,7 +25,7 @@
         <div class="row">
           <!--Grid column-->
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0 m-auto">
-            <h1 class="text-uppercase">Categorias</h1>
+            <h1 style="color: #004aad" class="text-uppercase">Categorias</h1>
 
             <ul class="list-unstyled mb-0">
               <li class="nav-item mx-1">

@@ -5,6 +5,9 @@
 
       <h1>{{ title }}</h1>
       <img :src="image" />
+      <p style="text-align: center; margin-bottom: 4%">
+        image caption for understanding
+      </p>
       <p>{{ description }}</p>
     </div>
   </div>
@@ -49,7 +52,10 @@ export default {
   display: flex;
   flex-direction: column;
   width: 90%;
-  max-width: 1024px;
+  max-width: 768px;
+}
+.postRead p {
+  font-size: 18px;
 }
 
 .postRead img {
